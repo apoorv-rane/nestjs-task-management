@@ -160,13 +160,13 @@
 			"name": "Auth",
 			"item": [
 				{
-					"name": "Signup",
+					"name": "Sign up",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"apoorv@xyz.com\",\n    \"password\": \"Abcd1234\"\n}",
+							"raw": "{\n    \"username\": \"apoorv1@xyz.com\",\n    \"password\": \"Abcd1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -174,7 +174,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/auth/signup",
+							"raw": "http://localhost:3000/auth/signin",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -182,7 +182,36 @@
 							"port": "3000",
 							"path": [
 								"auth",
-								"signup"
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"apoorv1@xyz.com\",\n    \"password\": \"Abcd1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signin"
 							]
 						}
 					},
