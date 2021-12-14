@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "80a7acee-2c8a-4849-a0cf-f058f5091791",
+		"name": "Task Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"abc\",\n    \"description\": \"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tasks/eb3b3b8f-04a6-4824-9820-640fc07cb44c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"eb3b3b8f-04a6-4824-9820-640fc07cb44c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tasks/ee8f9d7a-849c-4bd3-b0ae-7ea46b588ac8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"ee8f9d7a-849c-4bd3-b0ae-7ea46b588ac8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task Status",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"IN_PROGRESS\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tasks/412311c4-7504-46e3-962c-c4bd8e1f13d0/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"412311c4-7504-46e3-962c-c4bd8e1f13d0",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tasks With Filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tasks?status=OPEN&search=xyz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "OPEN"
+						},
+						{
+							"key": "search",
+							"value": "xyz"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
